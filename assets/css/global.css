@@ -5,8 +5,15 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F6F8FC;
+}
+
 .content {
-    padding: 1rem;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    background-color: #FFFFFF;
+    border-radius: 15px;
 }
 
 .pokemons {
@@ -65,7 +72,8 @@
 
 @media screen AND (min-width: 768px) {
     .content {
-        padding: 2rem;
+        margin: 1.5rem;
+        padding: 1.5rem;
     }
 
     .pokemons {
@@ -79,7 +87,8 @@
 
 @media screen AND (min-width: 1024px) {
     .content {
-        padding: 3rem;
+        margin: 2rem;
+        padding: 2rem;
     }
 
     .pokemons {
