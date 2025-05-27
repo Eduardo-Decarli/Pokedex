@@ -7,6 +7,7 @@
     <title>Pokedex</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/pokemons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
@@ -14,17 +15,23 @@
 </head>
 
 <body>
-    <header>
-        <div class="container-header">
+    <header class="header">
+        <div>
             <a href="">Back</a>
         </div>
     </header>
-    <section class="content">
+
+    <main class="container">
         <h1>Pokedex</h1>
-        <ol class="pokemons" id="pokemons">
+        <ol class="pokemons-list" id="pokemons">
             <!-- Content pokemons -->
         </ol>
-    </section>
+
+        <div class="loadMore">
+            <button id="loadMoreButton" type="button">Ver mais</button>
+        </div>
+    </main>
+
     <script src="assets/js/pokemon-model.js"></script>
     <script src="assets/js/getPokemon.js"></script>
     <script src="assets/js/main.js"></script>
