@@ -1,13 +1,13 @@
 function convertPokemonToHtml(pokemon) {
 
-    return `<li class="pokemon">
+    return `<li class="pokemon ${pokemon.type}">
         <div class="poke-id">
             <span class="name">${pokemon.name}</span>
             <span class="number">#00${pokemon.number}</span>
         </div>
         <div class="detail">
             <ol class="types">
-                ${pokemon.types.map(type => `<li class="type">${type}</li>`).join('')}
+                ${pokemon.types.map(type => `<li class="type ${type}">${type}</li>`).join('')}
             </ol>
             <img src="${pokemon.photo}"
                 alt="${pokemon.name}">
@@ -17,7 +17,7 @@ function convertPokemonToHtml(pokemon) {
 
 const pokemonsOl = document.getElementById('pokemons');
 
-pokemonsApi.getPokemons(0, 10).then((pokemons = {}) => {
+pokemonsApi.getPokemons(0, 40).then((pokemons = {}) => {
 
     const newList = pokemons.map(convertPokemonToHtml).join("");
     pokemonsOl.innerHTML = newList
